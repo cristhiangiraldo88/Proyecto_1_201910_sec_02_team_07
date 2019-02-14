@@ -1,6 +1,6 @@
 package model.data_structures;
 
-public interface IStack<T> extends Iterable<T>{
+public interface IStack<Item> extends Iterable<Item>{
 	
 	/**
 	 * Retorna true si la Pila esta vacia
@@ -18,11 +18,11 @@ public interface IStack<T> extends Iterable<T>{
 	 * Inserta un nuevo elemento en la Pila
 	 * @param t el nuevo elemento que se va ha agregar
 	 */
-	public void push(T t);
+	public void push(Item t);
 	
 	/**
 	 * Quita y retorna el elemento agregado más recientemente
 	 * @return el elemento agregado más recientemente
 	 */
-	public T pop();	
+	public Item pop();	
 }

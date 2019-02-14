@@ -44,7 +44,7 @@ public class Controller {
 			switch(option)
 			{
 				case 1:
-					this.loadMovingViolations();
+					this.loadMovingViolations("data/Moving_Violations_Issued_in_February_2018.csv","data/Moving_Violations_Issued_in_January_2018.csv");
 					break;
 					
 				case 2:
@@ -70,17 +70,15 @@ public class Controller {
 
 	
 
-	public void loadMovingViolations() {
-		// TODO
+	public void loadMovingViolations(String path, String path2) {
+		view.loadMovingViolations(path, path2);
 	}
 	
 	public IQueue <VODaylyStatistic> getDailyStatistics () {
-		// TODO
-		return null;
+		return view.getDailyStatistics();
 	}
 	
 	public IStack <VOMovingViolations> nLastAccidents(int n) {
-		// TODO
-		return null;
+		return view.nLastAccidents(n);
 	}
 }
